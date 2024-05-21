@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ContextoDeCursos } from '../Contextos/ContextoDeCursos';
 
-const RastreadorDeProgreso = () => (
-  <div>
-    <h2>Rastreador de Progreso</h2>
-    {/* Implementar funcionalidad de rastreo de progreso */}
-  </div>
-);
+const RastreadorDeProgreso = () => {
+  const { cursos } = useContext(ContextoDeCursos);
+
+  return (
+    <div>
+      <h2>Rastreador de Progreso</h2>
+      <ul>
+        {cursos.map(curso => (
+          <li key={curso.id}>
+            {curso.titulo}: {curso.progreso}%
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
 
 export default RastreadorDeProgreso;

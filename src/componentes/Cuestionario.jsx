@@ -1,3 +1,4 @@
+// src/componentes/Cuestionario.jsx
 import React, { useContext, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { ContextoDeCursos } from '../Contextos/ContextoDeCursos';

@@ -105,3 +105,62 @@ footer {
   margin-top: 2em;
   font-size: 0.9em;
 }
+.registro-container {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.registro-container h2 {
+  color: #333333;
+  font-size: 2em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.registro-container label {
+  display: block;
+  margin-bottom: 0.5em;
+  color: #555555;
+}
+
+.registro-container input[type="text"],
+.registro-container input[type="email"],
+.registro-container input[type="password"] {
+  width: 100%;
+  padding: 0.8em;
+  margin-bottom: 1em;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.registro-container button {
+  background-color: #61dafb;
+  color: #ffffff;
+  padding: 0.8em 1.5em;
+  border: none;
+  border-radius: 4px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 100%;
+}
+
+.registro-container button:hover {
+  background-color: #21a1f1;
+  transform: scale(1.05);
+}
+
+/* Estilos para la alerta de registro exitoso */
+.alert {
+  background-color: #4caf50;
+  color: #ffffff;
+  padding: 0.8em 1em;
+  border-radius: 4px;
+  margin-top: 1em;
+  text-align: center;
+}

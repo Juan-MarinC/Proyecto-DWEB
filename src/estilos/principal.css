@@ -1,29 +1,35 @@
-/* Añadir tus estilos aquí */
-body {
-  font-family: 'Arial', sans-serif;
+/* Reset CSS */
+* {
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f2f5;
   color: #333;
+  line-height: 1.6;
 }
 
 header, footer {
-  background-color: #282c34;
-  color: white;
+  background-color: #343a40;
+  color: #fff;
   text-align: center;
   padding: 1.5em 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav a {
-  color: white;
+  color: #fff;
   margin: 0 1em;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 nav a:hover {
-  color: #61dafb;
+  color: #17a2b8;
 }
 
 main {
@@ -33,25 +39,25 @@ main {
 }
 
 h2 {
-  color: #282c34;
-  font-size: 2em;
+  color: #343a40;
+  font-size: 2.2em;
   margin-bottom: 0.5em;
-  border-bottom: 2px solid #61dafb;
+  border-bottom: 2px solid #17a2b8;
   display: inline-block;
   padding-bottom: 0.3em;
 }
 
 .curso {
-  background-color: white;
-  padding: 1.5em;
+  background-color: #fff;
+  padding: 2em;
   margin-bottom: 1.5em;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .curso h3 {
-  color: #61dafb;
-  font-size: 1.5em;
+  color: #17a2b8;
+  font-size: 1.8em;
   margin-bottom: 0.5em;
 }
 
@@ -81,13 +87,13 @@ h2 {
 .boton-container {
   display: flex;
   justify-content: center;
-  gap: 1em; /* Espacio entre los botones */
+  gap: 1em;
   margin-top: 1.5em;
 }
 
 button {
-  background-color: #61dafb;
-  color: white;
+  background-color: #17a2b8;
+  color: #fff;
   padding: 0.8em 1.5em;
   border: none;
   border-radius: 4px;
@@ -97,7 +103,7 @@ button {
 }
 
 button:hover {
-  background-color: #21a1f1;
+  background-color: #138496;
   transform: scale(1.05);
 }
 
@@ -105,17 +111,19 @@ footer {
   margin-top: 2em;
   font-size: 0.9em;
 }
+
+/* Registration Container Styles */
 .registro-container {
   max-width: 400px;
   margin: 0 auto;
-  background-color: #ffffff;
+  background-color: #fff;
   padding: 2em;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .registro-container h2 {
-  color: #333333;
+  color: #343a40;
   font-size: 2em;
   margin-bottom: 1em;
   text-align: center;
@@ -124,7 +132,7 @@ footer {
 .registro-container label {
   display: block;
   margin-bottom: 0.5em;
-  color: #555555;
+  color: #555;
 }
 
 .registro-container input[type="text"],
@@ -133,14 +141,14 @@ footer {
   width: 100%;
   padding: 0.8em;
   margin-bottom: 1em;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
 }
 
 .registro-container button {
-  background-color: #61dafb;
-  color: #ffffff;
+  background-color: #17a2b8;
+  color: #fff;
   padding: 0.8em 1.5em;
   border: none;
   border-radius: 4px;
@@ -151,32 +159,32 @@ footer {
 }
 
 .registro-container button:hover {
-  background-color: #21a1f1;
+  background-color: #138496;
   transform: scale(1.05);
 }
 
-/* Estilos para la alerta de registro exitoso */
+/* Success Alert Styles */
 .alert {
-  background-color: #4caf50;
-  color: #ffffff;
+  background-color: #28a745;
+  color: #fff;
   padding: 0.8em 1em;
   border-radius: 4px;
   margin-top: 1em;
   text-align: center;
 }
 
-/* Estilos para el formulario de inicio de sesión */
+/* Login Form Styles */
 .formulario {
   max-width: 400px;
   margin: 0 auto;
-  background-color: #ffffff;
+  background-color: #fff;
   padding: 2em;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .formulario h2 {
-  color: #333333;
+  color: #343a40;
   font-size: 2em;
   margin-bottom: 1em;
   text-align: center;
@@ -185,7 +193,7 @@ footer {
 .formulario label {
   display: block;
   margin-bottom: 0.5em;
-  color: #555555;
+  color: #555;
 }
 
 .formulario input[type="email"],
@@ -193,14 +201,14 @@ footer {
   width: 100%;
   padding: 0.8em;
   margin-bottom: 1em;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
 }
 
 .formulario button {
-  background-color: #61dafb;
-  color: #ffffff;
+  background-color: #17a2b8;
+  color: #fff;
   padding: 0.8em 1.5em;
   border: none;
   border-radius: 4px;
@@ -211,12 +219,27 @@ footer {
 }
 
 .formulario button:hover {
-  background-color: #21a1f1;
+  background-color: #138496;
   transform: scale(1.05);
 }
 
 .error {
-  color: #ff0000;
+  color: #dc3545;
   margin-top: 1em;
   text-align: center;
+}
+
+/* Additional styles for quiz options spacing */
+.formulario .option {
+  margin-bottom: 1em;
+}
+
+.formulario .option label {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.formulario .option input[type="radio"],
+.formulario .option input[type="checkbox"] {
+  margin-right: 0.5em;
 }

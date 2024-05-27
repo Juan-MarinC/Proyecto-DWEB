@@ -69,3 +69,4 @@ const Registro = ({ onRegistro }) => {
 };
 
 export default Registro;
+

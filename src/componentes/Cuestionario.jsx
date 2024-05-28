@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { ContextoDeCursos } from '../Contextos/ContextoDeCursos';
 import styled from 'styled-components';
 
+// Estilos para el contenedor del cuestionario
 const CuestionarioContainer = styled.div`
   padding: 2em;
   max-width: 800px;
@@ -12,6 +13,7 @@ const CuestionarioContainer = styled.div`
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 `;
 
+// Estilos para el título del cuestionario
 const Titulo = styled.h2`
   color: #343a40;
   font-size: 2em;
@@ -19,22 +21,26 @@ const Titulo = styled.h2`
   text-align: center;
 `;
 
+// Estilos para el contenedor de cada pregunta
 const PreguntaContainer = styled.div`
   margin-bottom: 1.5em;
 `;
 
+// Estilos para el título de cada pregunta
 const PreguntaTitulo = styled.h3`
   color: #343a40;
   font-size: 1.5em;
   margin-bottom: 0.5em;
 `;
 
+// Estilos para el contenedor de opciones de respuesta
 const OpcionesContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 1em;
 `;
 
+// Estilos para los botones de opción de respuesta
 const OpcionBoton = styled.button`
   background-color: ${props => props.seleccionado ? '#138496' : '#17a2b8'};
   color: #fff;
@@ -53,6 +59,7 @@ const OpcionBoton = styled.button`
   }
 `;
 
+// Estilos para el botón de envío del cuestionario
 const EnvioBoton = styled.button`
   background-color: #28a745;
   color: #fff;
@@ -71,6 +78,7 @@ const EnvioBoton = styled.button`
   }
 `;
 
+// Estilos para mostrar el puntaje obtenido
 const Puntaje = styled.p`
   color: #343a40;
   font-size: 1.2em;
@@ -78,14 +86,16 @@ const Puntaje = styled.p`
   text-align: center;
 `;
 
+// Componente principal del cuestionario
 const Cuestionario = () => {
-  const { id } = useParams();
-  const { cursos, actualizarProgreso } = useContext(ContextoDeCursos);
-  const curso = cursos.find(c => c.id === parseInt(id));
+  const { id } = useParams(); // Obtener el parámetro ID de la URL
+  const { cursos, actualizarProgreso } = useContext(ContextoDeCursos); // Obtener cursos y la función para actualizar el progreso desde el contexto
+  const curso = cursos.find(c => c.id === parseInt(id)); // Encontrar el curso actual basado en el ID de la URL
 
-  const [respuestas, setRespuestas] = useState({});
-  const [puntaje, setPuntaje] = useState(null);
+  const [respuestas, setRespuestas] = useState({}); // Estado para almacenar las respuestas seleccionadas
+  const [puntaje, setPuntaje] = useState(null); // Estado para almacenar el puntaje obtenido
 
+  // Función para manejar el cambio de respuesta
   const manejarCambio = (preguntaIndex, opcion) => {
     setRespuestas({
       ...respuestas,
@@ -93,6 +103,7 @@ const Cuestionario = () => {
     });
   };
 
+  // Función para manejar el envío del cuestionario
   const manejarEnvio = () => {
     let nuevoPuntaje = 0;
     curso.preguntas.forEach((pregunta, index) => {
@@ -105,10 +116,12 @@ const Cuestionario = () => {
     actualizarProgreso(curso.id, nuevoProgreso);
   };
 
+  // Verificar si el curso no existe
   if (!curso) {
     return <p>Curso no encontrado</p>;
   }
 
+  // Renderizar el cuestionario
   return (
     <CuestionarioContainer>
       <Titulo>Cuestionario: {curso.titulo}</Titulo>
